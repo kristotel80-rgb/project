@@ -2,8 +2,8 @@
 require_once 'pembayaran.php';
 require_once 'cetak.php';
 
-#Penggunaan Class QRIS
-class Virtualaccount extends Pembayaran implements Cetak {
+#Penggunaan Class Virtual Account
+class VirtualAccount extends Pembayaran implements Cetak {
 
     public function prosesPembayaran() {
         if ($this->validasi()) {
