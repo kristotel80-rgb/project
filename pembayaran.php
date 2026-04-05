@@ -7,6 +7,15 @@ abstract class Pembayaran {
         $this->jumlah = $jumlah;
     }
 
+    #Diskon dan Pajak
+    public function hitungTotal() {
+        $diskon = $this->jumlah * 0.10;
+        $setelahDiskon = $this->jumlah - $diskon;
+        $pajak = $setelahDiskon * 0.11;
+
+        return $setelahDiskon + $pajak;
+    }
+
     // method wajib
     abstract public function prosesPembayaran();
 
