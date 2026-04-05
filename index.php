@@ -30,10 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'va': $bayar = new VirtualAccount($jumlah); break;
     }
 
-    // 🔥 PAKAI METHOD DARI CLASS
     $total = $bayar->hitungTotal();
 
-    // biar tetap bisa ditampilkan rinci
     $diskon = $jumlah * 0.10;
     $setelahDiskon = $jumlah - $diskon;
     $pajak = $setelahDiskon * 0.11;
